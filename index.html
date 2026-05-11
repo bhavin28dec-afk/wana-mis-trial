@@ -179,7 +179,7 @@ window.PRELOADED_MIS = {"file_name":"MIS_JAN25_APR26.xlsx","monthly_sales":{"mon
   </div>
   <nav class="sb-scroll">
     <div class="sb-sec">Main</div>
-    <div class="ni active" id="n-dash" onclick="go('dash')">
+    <div class="ni" id="n-dash" onclick="go('dash')">
       <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg>
       Executive Dashboard
     </div>
@@ -210,7 +210,7 @@ window.PRELOADED_MIS = {"file_name":"MIS_JAN25_APR26.xlsx","monthly_sales":{"mon
       COGS Month Trend
     </div>
     <div class="sb-sec">Operations</div>
-    <div class="ni" id="n-inv" onclick="go('inv')">
+    <div class="ni active" id="n-inv" onclick="go('inv')">
       <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
       Inventory SM&amp;NM
       <span class="nb" id="inv-badge" style="display: inline-flex;">!</span>
@@ -238,7 +238,7 @@ window.PRELOADED_MIS = {"file_name":"MIS_JAN25_APR26.xlsx","monthly_sales":{"mon
 <div class="main">
   <div class="topbar">
     <div class="topbar-l">
-      <h1 id="tTitle">Executive Dashboard</h1>
+      <h1 id="tTitle">Inventory SM&amp;NM</h1>
       <p id="tSub">Wana Hospital · MIS_JAN25_APR26.xlsx · Apr-26</p>
     </div>
     <div class="topbar-r">
@@ -273,7 +273,7 @@ window.PRELOADED_MIS = {"file_name":"MIS_JAN25_APR26.xlsx","monthly_sales":{"mon
 
 
 <!-- ══════════ DASHBOARD ══════════ -->
-<div class="page active" id="page-dash">
+<div class="page" id="page-dash">
   <div class="kg kg4" id="kg-dash">
     <div class="kc bl"><div class="ki bl">₹</div><div class="kl">Total YTD Net Sales</div><div class="kv" id="k1">₹2938L</div><div class="kch neu" id="k1s">16 months · Avg ₹184L/mo</div></div>
     <div class="kc gr"><div class="ki gr">📈</div><div class="kl" id="k2l">Net Sales — Apr-26</div><div class="kv" id="k2">₹217L</div><div class="kch up2" id="k2s">↑5.2% vs Mar-26</div></div>
@@ -294,22 +294,22 @@ window.PRELOADED_MIS = {"file_name":"MIS_JAN25_APR26.xlsx","monthly_sales":{"mon
         <div class="li"><div class="ld" style="background:#34d9a5"></div>LAF OPD</div>
         <div class="li"><div class="ld" style="background:#f79244"></div>Dept Supply</div>
       </div>
-      <div class="cw" style="height:260px"><canvas id="c-monthly" style="box-sizing: border-box; display: block; height: 260px; width: 832px;" width="832" height="260"></canvas></div>
+      <div class="cw" style="height:260px"><canvas id="c-monthly" width="832" height="260" style="display: block; box-sizing: border-box; height: 260px; width: 832px;"></canvas></div>
     </div>
     <div class="card">
       <div class="ch"><div><div class="ct">Latest Month Mix</div><div class="cs" id="mixSub">Apr-26 segment mix</div></div></div>
-      <div class="cw" style="height:175px"><canvas id="c-mix" style="box-sizing: border-box; display: block; height: 175px; width: 397px;" width="397" height="175"></canvas></div>
+      <div class="cw" style="height:175px"><canvas id="c-mix" width="397" height="175" style="display: block; box-sizing: border-box; height: 175px; width: 397px;"></canvas></div>
       <div class="leg" style="margin-top:10px;justify-content:center" id="mixLeg"><div class="li"><div class="ld" style="background:#4f8ef7"></div>DU 67.6%</div><div class="li"><div class="ld" style="background:#34d9a5"></div>LAF 13.1%</div><div class="li"><div class="ld" style="background:#f79244"></div>Supply 19.3%</div></div>
     </div>
   </div>
   <div class="g2">
     <div class="card">
       <div class="ch"><div><div class="ct">Grand Total Trend</div><div class="cs">16-month rolling (₹L)</div></div></div>
-      <div class="cw" style="height:200px"><canvas id="c-trend" style="box-sizing: border-box; display: block; height: 200px; width: 614px;" width="614" height="200"></canvas></div>
+      <div class="cw" style="height:200px"><canvas id="c-trend" width="614" height="200" style="display: block; box-sizing: border-box; height: 200px; width: 614px;"></canvas></div>
     </div>
     <div class="card">
       <div class="ch"><div><div class="ct" id="dailyTitle">Daily Sales — Apr-26</div><div class="cs">DU + LAF + Opticals (₹L)</div></div></div>
-      <div class="cw" style="height:200px"><canvas id="c-daily" style="box-sizing: border-box; display: block; height: 200px; width: 614px;" width="614" height="200"></canvas></div>
+      <div class="cw" style="height:200px"><canvas id="c-daily" width="614" height="200" style="display: block; box-sizing: border-box; height: 200px; width: 614px;"></canvas></div>
     </div>
   </div>
   <div class="card">
@@ -434,7 +434,7 @@ window.PRELOADED_MIS = {"file_name":"MIS_JAN25_APR26.xlsx","monthly_sales":{"mon
 </div>
 
 <!-- ══════════ INVENTORY ══════════ -->
-<div class="page" id="page-inv">
+<div class="page active" id="page-inv">
   <div class="kg kg4">
     <div class="kc bl"><div class="kl">DU Total Inventory</div><div class="kv" id="i1">₹1.8Cr</div></div>
     <div class="kc re"><div class="kl">DU Non-Moving</div><div class="kv" id="i2">₹65.3L</div><div class="kch dn2" id="i2s">35.5% of total</div></div>
